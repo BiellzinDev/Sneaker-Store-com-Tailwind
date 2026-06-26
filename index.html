@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Oxygen:wght@400;700&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>SNEAKERS</title>
+
+</head>
+<body class="w-full h-dvh font-sans">
+  <div class="w-full h-full relative">
+    <header class="flex w-full h-16 justify-center items-center xl:h-24 xl:justify-center xl:items-center xl:w-full ">
+      <div class="flex w-full justify-center h-16 relative items-center xl:border-black xl:border-b xl:h-24 xl:justify-end">
+        <div class="flex w-full justify-around items-center gap-16 h-8 md:w-4/5 xl:w-full xl:h-full xl:gap-0 xl:px-8">
+          <div class="flex justify-between items-center w-fit gap-2 h-full flex-row">
+            <button class="hamburger-menu flex items-center justify-center h-5 bg-inherit border-inherit cursor-pointer md:hidden">
+              <img class="h-5" src="./images/icon-menu.svg" alt="">
+            </button>
+              <h1 class="flex items-center justify-center">
+                <a class="flex items-center justify-center font-bold" href="#"><img src="./images/logo.svg" class="w-32 h-6 md:h-7" alt=""></a>
+              </h1>
+          </div>
+          <nav class="nav shadow-(--box) transform-[translateX(-100%)] transition rounded-r-lg absolute top-0 left-0 h-dvh w-3/5 md:transform-none md:shadow-none bg-white md:items-center md:flex md:relative md:h-full xl:h-full">
+            <div class=" tt p-4 flex items-start w-4/5 h-37dvh gap-2 justify-between flex-col md:p-0 md:w-full xl:h-full">
+              <button class="btn-close flex items-center cursor-pointer md:hidden">
+                <img src="./images/icon-close.svg" alt="">
+              </button>
+              <ul class="lista-nav flex flex-col items-start list-none gap-2 w-full justify-center md:items-center md:flex-row xl:h-full">
+                <li class="p-1 hover:bg-(--pale-orange) border-b-4 border-transparent rounded-xl w-full xl:hover:border-(--orange) xl:hover:rounded-none xl:hover:bg-none flex md:p-0 md:justify-center xl:h-full xl:items-center "><a class="font-bold md:text-gray-400" href="#">Collections</a></li>
+                <li class="p-1 hover:bg-(--pale-orange) border-b-4 border-transparent rounded-xl w-full xl:hover:border-(--orange) xl:hover:rounded-none xl:hover:bg-none flex md:p-0 md:justify-center xl:h-full xl:items-center "><a class="font-bold md:text-gray-400" href="#">Men</a></li>
+                <li class="p-1 hover:bg-(--pale-orange) border-b-4 border-transparent rounded-xl w-full xl:hover:border-(--orange) xl:hover:rounded-none xl:hover:bg-none flex md:p-0 md:justify-center xl:h-full xl:items-center "><a class="font-bold md:text-gray-400" href="#">Women</a></li>
+                <li class="p-1 hover:bg-(--pale-orange) border-b-4 border-transparent rounded-xl w-full xl:hover:border-(--orange) xl:hover:rounded-none xl:hover:bg-none flex md:p-0 md:justify-center xl:h-full xl:items-center "><a class="font-bold md:text-gray-400" href="#">About</a></li>
+                <li class="p-1 hover:bg-(--pale-orange) border-b-4 border-transparent rounded-xl w-full xl:hover:border-(--orange) xl:hover:rounded-none xl:hover:bg-none flex md:p-0 md:justify-center xl:h-full xl:items-center "><a class="font-bold md:text-gray-400" href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="user-cart flex gap-4 flex-row items-center justify-center xl:h-10">
+            <button class="btn-cart cursor-pointer">
+              <img src="./images/icon-cart.svg" alt="">
+            </button>
+            <div class="user w-7 h-7 rounded-full bg-[url(./images/image-avatar.png)] bg-no-repeat bg-cover cursor-pointer border-transparent border md:w-7 xl:w-10 xl:h-full min-[1200px]:hover:border-(--orange)">
+            </div>
+          </div>
+        </div>
+        <div class="cart-top min-[1200px]:shadow-(--cart) hidden flex-col justify-center items-center absolute w-11/12 top-20 bg-white rounded-2xl max-w-xl z-10 xl:right-4 xl:max-w-96">
+              <div class="name-cart py-6 limiter-cart-top flex justify-center items-start flex-col w-10/12 h-fit basis-auto md:max-w-3xl">
+                  <h4 class="font-bold text-xl">Cart</h4>
+                </div>
+                <div class="box-cart-top w-full flex flex-col justify-center items-center border-t-1 border-gray-400">
+                  <div class="cart-full limiter-cart-top flex flex-col justify-center items-center gap-5 pt-4 pb-8 w-10/12 md:max-w-3xl">
+                    <span class="empty text-gray-400 font-bold py-12 flex">Your cart is empty.</span>
+                    <ul class="lista-cart-full hidden flex-row justify-center items-center w-full xl:hidden">
+                      <li class="li-cart flex flex-row justify-between basis-auto gap-3 h-fit grow min-[1200px]:hover:border-none min-[1200px]:border-none">
+                        <div class="pic-thumbr xl:w-fit ">
+                          <img class="w-14 rounded-xl" src="./images/image-product-1-thumbnail.jpg" alt="">
+                        </div>
+                        <div class="values-total flex flex-col justify-between items-start w-fit">
+                          <p class="limited text-gray-400 font-normal pb-1 xl:text-sm">Fall Limited Edition Sneakers</p>
+                          <div class="values flex gap-2">
+                            <p class="p125 text-gray-400">$125.00</p>
+                            <span><p class="p125 qtd text-gray-400">X3</p></span>
+                            <span><p class="valueTotal font-bold">$375.00</p></span>
+                          </div>
+                        </div>
+                        <button class="btn-delete cursor-pointer "><i class="bi bi-trash3-fill hover:text-red-700 text-gray-400 text-xl"></i></button>
+                      </li>
+                    </ul>
+                    <button class="btn-check bg-(--orange) hidden w-full py-4 font-bold rounded-2xl items-center justify-center cursor-pointer">Checkout</button>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </header>
+    <main class="main flex items-center justify-center flex-col">
+      <div class="box-limiter-desktop w-full max-w-8xl flex items-center justify-center flex-col xl:max-w-[80%] xl:flex-row xl:relative xl:pt-12 xl:items-center">
+        <div class="box-sneaker pb-6 w-full max-w-8xl  xl:flex xl:flex-col xl:gap-6 xl:w-3/5 min-[700px]:h-[37rem] min-[800px]:h-[46rem] xl:h-full min-[1200px]:h-full">
+          <div class="teste w-full items-center justify-center flex-col flex xl:flex xl:justify-center xl:cursor-pointer">
+            <img class="testeImg w-full h-full hidden xl:flex xl:rounded-3xl xl:w-full" src="./images/image-product-1.jpg" alt="">
+            <div class="box-back-sneacker flex items-center justify-around flex-row w-full h-96 bg-[url(./images/image-product-1.jpg)] bg-cover bg-center bg-no-repeat gap-72 md:bg-top min-[700px]:h-[37rem] min-[800px]:h-[46rem]  xl:hidden">
+              <button class="next btn-minus flex rounded-full w-10 h-10 cursor-pointer font-bold text-2xl bg-white justify-center"> < </button>
+              <button class="next btn-plus flex rounded-full w-10 h-10 cursor-pointer font-bold text-2xl bg-white justify-center">></button>
+            </div>
+          </div>
+          <div class="box-carrosel hidden xl:w-full xl:flex xl:gap-4">
+            <div class="sneak1 xl:relative" data-number="1">
+              <img class="xl:rounded-3xl" src="./images/image-product-1-thumbnail.jpg" alt="">
+              <div class="opaci-sneaker "></div>
+            </div>
+            <div class="sneak1 xl:relative" data-number="2">
+              <img class="xl:rounded-3xl" src="./images/image-product-2-thumbnail.jpg" alt="">
+              <div class="opaci-sneaker"></div>
+            </div>
+            <div class="sneak1 xl:relative" data-number="3">
+              <img class="xl:rounded-3xl" src="./images/image-product-3-thumbnail.jpg" alt="">
+              <div class="opaci-sneaker"></div>
+            </div>
+            <div class="sneak1 xl:relative" data-number="4">
+              <img class="xl:rounded-3xl" src="./images/image-product-4-thumbnail.jpg" alt="">
+              <div class="opaci-sneaker"></div>
+            </div>
+          </div>
+        </div>
+        <div class="box-info pb-8 flex flex-col justify-center items-center md:pt-6 xl:w-4/5 xl:gap-4 xl:pl-16">
+          <div class=" w-[90%] box-text flex items-start justify-center flex-col gap-2 md:max-w-3xl">
+            <p class="company text-gray-500 font-bold text-xl">Sneaker Company</p>
+            <h2 class="fall text-3xl xl:pb-8">
+              Fall Limited Edition Sneakers
+            </h2>
+            <p class="offer text-gray-500 text-sm">
+              These low-profile sneakers are your perfect casual wear companion. Featuring a
+              durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+          </div>
+          <div class="box-value w-[90%] flex items-center flex-row justify-between py-4 md:max-w-3x xl:flex-col xl:gap-4 xl:items-start">
+            <div class="percent flex items-center flex-row justify-between gap-4">
+              <h3 class="text-2xl">$125.00</h3>
+              <p class="descont bg-black text-white rounded-xl py-1 px-2 font-bold">50%</p>
+            </div>
+            <p class="old-value text-gray-400 bg-gray-400 h-px flex items-center">$250.00</p>
+          </div>
+          <div class="w-[90%] desktop-add-cart flex flex-col gap-4 md:flex-col md:max-w-3xl xl:flex-row">
+            <div class="add-minus flex flex-row justify-around items-center gap-2 py-4 rounded-2xl w-full bg-gray-200 xl:w-4/5">
+              <button class="plus hover:opacity-50 cursor-pointer minus flex items-center justify-center"><img src="./images/icon-minus.svg" alt=""></button>
+              <span class="count">0</span>
+              <button class="plus hover:opacity-50 cursor-pointer more"><img src="./images/icon-plus.svg" alt=""></button>
+            </div>
+            <div class="add-cart hover:opacity-50 cursor-pointer bg-(--orange) flex flex-row justify-center items-center gap-4 p-4 rounded-2xl w-full font-bold ">
+              <button class="cart hover:opacity-50 cursor-pointer flex items-center justify-center"><img src="./images/icon-cart.svg" alt=""></button>
+              <p>Add to cart</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="carousel hidden carrosel-box flex-col justify-center items-center md:hidden xl:top-0 xl:absolute xl:bg-(--blackzin) xl:w-full xl:h-full xl:hidden">
+      <div class="limit-carousel hidden xl:flex xl:flex-col ">
+        <div class="carousel-close xl:flex xl:justify-end xl:w-[28rem] xl:py-4">
+          <button class="btn-close-carousel xl:cursor-pointer text-white font-bold text-xl hover:text-(--orange)">X</button>
+        </div>
+        <div class="carousel-track w-fit xl:relative xl:flex xl:justify-center xl:w-[30rem]">
+          <button class="next next1 absolute left-0 top-2/4 rounded-full w-10 h-10 cursor-pointer font-bold text-3xl bg-white justify-center flex hover:text-(--orange)"><</button>
+          <div class="track-img"><img class="imgCarousel rounded-3xl w-[28rem]" src="./images/image-product-1.jpg" alt=""></div>
+          <button class="next next2 absolute right-0 top-2/4 rounded-full w-10 h-10 cursor-pointer font-bold text-3xl bg-white justify-center flex hover:text-(--orange)">></button>
+        </div>
+        <div class="box-carrosel box-carousel xl:flex xl:flex-row xl:gap-4 xl:py-6 xl:justify-center">
+          <div class="sneak1 littleBox xl:relative cursor-pointer" data-id="1">
+            <img class="xl:rounded-3xl xl:w-[80px]" src="./images/image-product-1-thumbnail.jpg" alt="">
+            <div class="opaci-sneak"></div>
+          </div>
+          <div class="sneak1 littleBox xl:relative cursor-pointer" data-id="2">
+            <img class="xl:rounded-3xl xl:w-[80px]" src="./images/image-product-2-thumbnail.jpg" alt="">
+            <div class="opaci-sneak"></div>
+          </div>
+          <div class="sneak1 littleBox xl:relative cursor-pointer" data-id="3">
+            <img class="xl:rounded-3xl xl:w-[80px]" src="./images/image-product-3-thumbnail.jpg" alt="">
+            <div class="op.subheadaci-sneak"></div>
+          </div>
+          <div class="sneak1 littleBox xl:relative cursor-pointer" data-id="4">
+            <img class="xl:rounded-3xl xl:w-[80px]" src="./images/image-product-4-thumbnail.jpg" alt="">
+            <div class="opaci-sneak"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./carousel.js"></script>
+  <script src="./cart.js"></script>
+  <script src="./nav.js"></script>
+  <script src="./cart-storage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+</html>
